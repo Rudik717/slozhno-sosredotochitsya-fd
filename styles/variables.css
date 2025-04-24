@@ -1,4 +1,13 @@
-/*
-  Переменные для вашего проекта
-  и их переопределение под различные устройства
-*/
+:root {
+  --accent-color: rgba(255, 0, 112, 1);
+  --font-family: 'IBM Plex mono';
+  --font-size: 18px;
+  --font-color: rgba(241, 178, 206, 1);
+  --font-decor-color: rgba(0, 0, 40, 1);
+  --small-screen-padding: 10px;
+  --big-screen-padding: 20px;
+  --section-margin-small-screen: 50px;
+  --section-margin-big-screen: 80px;
+  --header-footer-margin-small-screen: 40px;
+  --header-footer-margin-big-screen: 60px;
+}

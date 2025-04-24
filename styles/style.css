@@ -1,5 +1,194 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  background-color: rgba(0, 0, 40, 1);
+  color: var(--font-color);
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr min-content 1fr;
+  block-size: calc(100vh - var(--small-screen-padding)*2);
+  margin-block-end: var(--header-footer-margin-small-screen);
+}
+
+.decorated-zone {
+  position: relative;
+}
+
+.decorated-zone::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  block-size: 25px;
+  inline-size: 25px;
+  border-block-start: 1px solid var(--accent-color);
+  border-inline-end: 1px solid var(--accent-color);
+}
+
+.decorated-zone::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  block-size: 25px;
+  inline-size: 25px;
+  border-block-end: 1px solid var(--accent-color);
+  border-inline-start: 1px solid var(--accent-color);
+}
+
+.header__theme-menu {
+  justify-self: end;
+  align-self: center;
+}
+
+.header__title {
+  justify-self: start;
+}
+
+.header-footer__title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 83%;
+  font-weight: bold;
+  text-transform: lowercase;
+  color: rgba(219, 0, 255, 1);
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.header__text {
+  display: inline-block;
+  justify-self: end;
+  align-self: center;
+}
+
+.title-decor {
+  background-color: var(--accent-color);
+  color: var(--font-decor-color);
+}
+
+.header__dark-decorated-element {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.header__dark-decorated-element::before {
+  content: "REC";
+  color: var(--accent-color);
+  margin-inline-end: 10px;
+  line-height: 25px;
+}
+
+.header__dark-decorated-element::after {
+  content: '';
+  display: inline-block;
+  background-color: var(--accent-color);
+  inline-size: 9px;
+  block-size: 9px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 4px 2px var(--accent-color);
+  margin-inline-end: 9px;
+  margin-block-end: 2px;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header__theme-menu-button {
+  background-color: transparent;
+  border: none;
+  text-transform: lowercase;
+  padding: 1.5px 13px;
+  color: var(--accent-color)
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--accent-color);
+}
+
+.content-section {
+  margin-block-end: var(--section-margin-small-screen);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.content-section:last-child {
+  margin-block-end: 0;
+}
+
+.section__title {
+  font-size: 18px;
+  color: var(--accent-color);
+}
+
+.card__title {
+  font-size: 18px;
+  margin-block-end: 10px;
+}
+
+.text-link {
+  text-decoration: none;
+  text-shadow: 2px 1px 0 var(--accent-color);
+}
+
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.footer {
+  margin-block-start: var(--header-footer-margin-small-screen);
+  block-size: calc(100vh - var(--small-screen-padding)*2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (width >= 768px) {
+  .header {
+    block-size: calc(100vh - var(--big-screen-padding)*2);
+    margin-block-end: var(--header-footer-margin-big-screen);
+  }
+  .header__text {
+    inline-size: calc(50vw - var(--big-screen-padding));
+  }
+  .content-section {
+    margin-block-end: var(--section-margin-big-screen);
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .section__why .section__title {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  .section__why .card {
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+  .section__what .section__title {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  .section__what .card {
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+  .section__how .section__title {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  .section__how .how__subtitle,
+  .section__how .card {
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+}
+
+@media (width >= 1024px) {
+  
 }

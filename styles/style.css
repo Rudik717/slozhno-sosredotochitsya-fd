@@ -1,6 +1,5 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 .page {
-  padding-inline: var(--small-screen-padding);
   font-family: var(--font-family), sans-serif;
   font-weight: normal;
   font-size: var(--font-size);
@@ -14,7 +13,7 @@
 }
 
 .header {
-  margin: 0 auto;
+  padding-inline: var(--small-screen-padding);
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr min-content 1fr;
@@ -24,7 +23,7 @@
 }
 
 main {
-  margin: 0 auto;
+  padding-inline: var(--small-screen-padding);
 }
 
 .decorated-zone {
@@ -35,7 +34,7 @@ main {
   content: "";
   position: absolute;
   top: var(--small-screen-padding);
-  right: 0;
+  right: var(--small-screen-padding);
   block-size: 25px;
   inline-size: 25px;
   border-block-start: 1px solid var(--title-color);
@@ -46,7 +45,7 @@ main {
   content: "";
   position: absolute;
   bottom: var(--small-screen-padding);
-  left: 0;
+  left: var(--small-screen-padding);
   block-size: 25px;
   inline-size: 25px;
   border-block-end: 1px solid var(--title-color);
@@ -86,7 +85,7 @@ main {
 .header__dark-decorated-element {
   position: absolute;
   top: var(--small-screen-padding);
-  right: 0;
+  right: var(--small-screen-padding);
 }
 
 .header__dark-decorated-element::before {
@@ -203,7 +202,7 @@ main {
 }
 
 .footer {
-  margin: 0 auto;
+  padding-inline: var(--small-screen-padding);
   margin-block-start: var(--header-footer-margin-small-screen);
   block-size: 100vh;
   padding-block: var(--small-screen-padding);
@@ -213,21 +212,22 @@ main {
 }
 
 @media (width >= 768px) {
-  .page {
-    padding-inline: var(--big-screen-padding);
-  }
   .header {
+    padding-inline: var(--big-screen-padding);
     margin-block-end: var(--header-footer-margin-big-screen);
     padding-block: var(--big-screen-padding);
   }
   .decorated-zone::before {
     top: var(--big-screen-padding);
+    right: var(--big-screen-padding);
   }
   .decorated-zone::after {
     bottom: var(--big-screen-padding);
+    left: var(--big-screen-padding);
   }
   .header__dark-decorated-element {
     top: var(--big-screen-padding);
+    right: var(--big-screen-padding);
   }
   .header-footer__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
@@ -311,7 +311,11 @@ main {
     grid-row-start: 4;
     grid-row-end: 5;
   }
+  main {
+    padding-inline: var(--big-screen-padding);
+  }
   .footer {
+    padding-inline: var(--big-screen-padding);
     margin-block-start: var(--header-footer-margin-big-screen);
     padding-block: var(--big-screen-padding);
   }

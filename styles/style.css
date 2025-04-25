@@ -1,5 +1,6 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 .page {
+  margin: 0 auto;
   padding-inline: var(--small-screen-padding);
   font-family: var(--font-family), sans-serif;
   font-weight: normal;

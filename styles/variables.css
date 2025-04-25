@@ -1,7 +1,11 @@
 :root {
   --accent-color: rgba(255, 0, 112, 1);
-  --font-family: 'IBM Plex mono';
+  --accent-opacity-color: rgba(255, 0, 112, 0.4);
+  --header-title-color: rgba(219, 0, 255, 1);
+  --title-color: rgba(255, 0, 112, 1);
+  --font-family: "IBM Plex mono";
   --font-size: 18px;
+  --line-height: 23.4px;
   --font-color: rgba(241, 178, 206, 1);
   --font-decor-color: rgba(0, 0, 40, 1);
   --small-screen-padding: 10px;
@@ -10,4 +14,6 @@
   --section-margin-big-screen: 80px;
   --header-footer-margin-small-screen: 40px;
   --header-footer-margin-big-screen: 60px;
+  --background-image: url(../images/cover-image-dark.png);
+  --background-color: rgba(0, 0, 40, 1);
 }

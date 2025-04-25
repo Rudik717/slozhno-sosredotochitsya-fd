@@ -14,12 +14,17 @@
 }
 
 .header {
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr min-content 1fr;
   block-size: 100vh;
   margin-block-end: var(--header-footer-margin-small-screen);
   padding-block: var(--small-screen-padding);
+}
+
+main {
+  margin: 0 auto;
 }
 
 .decorated-zone {
@@ -198,6 +203,7 @@
 }
 
 .footer {
+  margin: 0 auto;
   margin-block-start: var(--header-footer-margin-small-screen);
   block-size: 100vh;
   padding-block: var(--small-screen-padding);

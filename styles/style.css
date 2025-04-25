@@ -1,9 +1,4 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-body {
-  margin: 0 auto;
-  padding: 0;
-}
-
 .page {
   padding-inline: var(--small-screen-padding);
   font-family: var(--font-family), sans-serif;

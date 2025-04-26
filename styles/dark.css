@@ -8,3 +8,7 @@
   --background-image: url(../images/cover-image-dark.png);
   --background-color: rgba(0, 0, 40, 1);
 }
+
+.theme-dark .header__dark-decorated-element {
+  display: block;
+}

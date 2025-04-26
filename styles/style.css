@@ -13,6 +13,7 @@
 }
 
 .header {
+  min-height: 668px;
   padding-inline: var(--small-screen-padding);
   display: grid;
   grid-template-columns: 1fr;
@@ -61,7 +62,7 @@ main {
   justify-self: start;
 }
 
-.header-footer__title {
+.page-title {
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 83%;
   font-weight: bold;
@@ -115,7 +116,7 @@ main {
 
 .header__theme-menu-button {
   background-color: transparent;
-  border: none;
+  border: 1px solid transparent;
   text-transform: lowercase;
   line-height: 18px;
   padding-block-start: 1.5px;
@@ -168,6 +169,7 @@ main {
 
 .how__subtitle {
   font-weight: bold;
+  font-size: var(--font-size);
 }
 
 .section__how .card__title {
@@ -229,7 +231,7 @@ main {
     top: var(--big-screen-padding);
     right: var(--big-screen-padding);
   }
-  .header-footer__title {
+  .page-title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
   .header__title {

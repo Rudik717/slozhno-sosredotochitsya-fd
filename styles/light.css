@@ -27,7 +27,4 @@
   .header__dark-decorated-element {
     display: none;
   }
-  .theme-dark .header__dark-decorated-element {
-    display: block;
-  }
 }
